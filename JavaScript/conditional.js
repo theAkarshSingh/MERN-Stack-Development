@@ -31,7 +31,7 @@ console.log();
 
 // Q3. Determine whether a given year is a leap year.
 let year = parseInt(input.question("Enter a year to check if it's a leap year or not: "));
-if(year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)){
+if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
     console.log(year + " is a leap year");
 } else {
     console.log(year + " is not a leap year");
