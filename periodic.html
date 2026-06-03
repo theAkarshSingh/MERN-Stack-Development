@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periodic Table</title>
+
+  <style>
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+      margin: 0;
+    }
+    
+    h1 {
+      display:flex;
+      text-align: center;
+      margin-bottom: 1em;
+      justify-items: center;
+    }
+    /* The Main Event: 18 columns, evenly spaced */
+    .periodic-table {
+      display: grid;
+      grid-template-columns: repeat(18, 1fr);
+      gap: 10px;
+      max-width: 2000px;
+      width: 100%;
+    }
+
+    /* Styling individual element boxes */
+    .element {
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 10px 5px;
+      text-align: center;
+      aspect-ratio: 1; /* Keeps them perfectly square-ish */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* transition: transform 0.2s ease, background-color 0.2s ease; */
+    }
+
+    .element:hover {
+      transform: scale(1.15);
+      background-color: #a542ae;
+      /* cursor: crosshair; */
+      /* z-index: 10; */
+      /* box-shadow: 0 4px 12px rgba(0,0,0,0.5); */
+    }
+
+    .symbol {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .number {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-bottom: 2px;
+    }
+
+    .jump-18 { 
+        grid-column-start: 18; 
+    }
+    .jump-13 { 
+        grid-column-start: 13; 
+    }
+
+    /* Optional: Color-coding groups */
+    .alkali { border-top: 3px solid #ff4b4b; }
+    .noble { border-top: 3px solid #4da1ff; }
+    .nonmetal { border-top: 3px solid #ffd166; }
+  </style>
+</head>
+<body>
+
+    <h1>Periodic Table</h1>
+
+  <div class="periodic-table">
+    <!-- Period 1 -->
+    <div class="element nonmetal"><span class="number">1</span><span class="symbol">H</span></div>
+    <!-- He jumps all the way to column 18 -->
+    <div class="element noble jump-18"><span class="number">2</span><span class="symbol">He</span></div>
+
+    <!-- Period 2 -->
+    <div class="element alkali"><span class="number">3</span><span class="symbol">Li</span></div>
+    <div class="element"><span class="number">4</span><span class="symbol">Be</span></div>
+
+    <!-- B jumps across the transition metal gap to column 13 -->
+    <div class="element nonmetal jump-13"><span class="number">5</span><span class="symbol">B</span></div>
+    <div class="element nonmetal"><span class="number">6</span><span class="symbol">C</span></div>
+    <div class="element nonmetal"><span class="number">7</span><span class="symbol">N</span></div>
+    <div class="element nonmetal"><span class="number">8</span><span class="symbol">O</span></div>
+    <div class="element nonmetal"><span class="number">9</span><span class="symbol">F</span></div>
+    <div class="element noble"><span class="number">10</span><span class="symbol">Ne</span></div>
+
+    <!-- Period 3 -->
+    <div class="element alkali"><span class="number">11</span><span class="symbol">Na</span></div>
+    <div class="element"><span class="number">12</span><span class="symbol">Mg</span></div>
+
+    <!-- Al jumps across the gap to column 13 -->
+    <div class="element jump-13"><span class="number">13</span><span class="symbol">Al</span></div>
+    <div class="element nonmetal"><span class="number">14</span><span class="symbol">Si</span></div>
+    <div class="element nonmetal"><span class="number">15</span><span class="symbol">P</span></div>
+    <div class="element nonmetal"><span class="number">16</span><span class="symbol">S</span></div>
+    <div class="element nonmetal"><span class="number">17</span><span class="symbol">Cl</span></div>
+    <div class="element noble"><span class="number">18</span><span class="symbol">Ar</span></div>
+
+    <!-- Period 4 (No jumps needed, it fills all 18 columns normally) -->
+    <div class="element alkali"><span class="number">19</span><span class="symbol">K</span></div>
+    <div class="element"><span class="number">20</span><span class="symbol">Ca</span></div>
+    <div class="element"><span class="number">21</span><span class="symbol">Sc</span></div>
+    <div class="element"><span class="number">22</span><span class="symbol">Ti</span></div>
+    <div class="element"><span class="number">23</span><span class="symbol">V</span></div>
+    <div class="element"><span class="number">24</span><span class="symbol">Cr</span></div>
+    <div class="element"><span class="number">25</span><span class="symbol">Mn</span></div>
+    <div class="element"><span class="number">26</span><span class="symbol">Fe</span></div>
+    <div class="element"><span class="number">27</span><span class="symbol">Co</span></div>
+    <div class="element"><span class="number">28</span><span class="symbol">Ni</span></div>
+    <div class="element"><span class="number">29</span><span class="symbol">Cu</span></div>
+    <div class="element"><span class="number">30</span><span class="symbol">Zn</span></div>
+    <div class="element"><span class="number">31</span><span class="symbol">Ga</span></div>
+    <div class="element nonmetal"><span class="number">32</span><span class="symbol">Ge</span></div>
+    <div class="element nonmetal"><span class="number">33</span><span class="symbol">As</span></div>
+    <div class="element nonmetal"><span class="number">34</span><span class="symbol">Se</span></div>
+    <div class="element nonmetal"><span class="number">35</span><span class="symbol">Br</span></div>
+    <div class="element noble"><span class="number">36</span><span class="symbol">Kr</span></div>
+  </div>
+
+</body>
+</html>
