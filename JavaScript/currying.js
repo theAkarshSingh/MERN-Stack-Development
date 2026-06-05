@@ -5,4 +5,4 @@ function mail(to){
         };
     };
 };
-mail("abc@gmail.com", "Welcome to community", "Hi");
+mail("abc@gmail.com")("Welcome to community")("Hi, we are glad to have you here.");
